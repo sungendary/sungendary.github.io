@@ -6,8 +6,96 @@
 $sidebar-sticky: false;
 @import "hydeout";
 
+/* ----- 사이드바: 검은 배경 복구 + 간격 줄이기 ----- */
 #sidebar {
-  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("/assets/img/bg.jpg");
+  padding: 1.5rem;
+}
+
+#sidebar .site-title {
+  margin-bottom: 0.4rem;
+}
+
+#sidebar header .lead {
+  margin-bottom: 0.75rem;
+}
+
+#sidebar nav > * {
+  line-height: 1.45;
+}
+
+#sidebar-icon-links {
+  margin-top: 0.5rem;
+}
+
+/* ----- Home 페이지 상단 프로필 배너 ----- */
+.home-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 2.5rem 2rem;
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("/assets/img/bg.jpg");
   background-size: cover;
   background-position: center;
+  color: #fff;
+}
+
+.container > .home-hero {
+  @media (min-width: $large-breakpoint) {
+    max-width: none;
+    padding: 2.5rem 3rem;
+    margin: (-$section-spacing * 2) (-$section-spacing * 2) $section-spacing;
+  }
+}
+
+.home-hero-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 3px solid rgba(255,255,255,0.9);
+  flex-shrink: 0;
+}
+
+.home-hero-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.home-hero-name {
+  margin: 0;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.home-hero-school {
+  margin: 0;
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.85);
+}
+
+.home-hero-email a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.home-hero-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.4rem;
+}
+
+.home-hero-links a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+@media (max-width: $large-breakpoint) {
+  .home-hero {
+    flex-direction: column;
+    text-align: center;
+  }
 }
