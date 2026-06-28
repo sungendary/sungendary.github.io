@@ -3,6 +3,7 @@
 # only main files contain this front matter, not partials.
 ---
 
+$sidebar-width: 14rem;   // 기본값 18rem. 숫자 줄이면 사이드바 더 좁아짐
 $sidebar-sticky: false;
 @import "hydeout";
 
