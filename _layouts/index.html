@@ -2,6 +2,21 @@
 layout: default
 ---
 
+{% if page.url == "/" %}
+<div class="home-hero">
+  <img class="home-hero-photo" src="{{ '/assets/img/profile.jpg' | relative_url }}" alt="profile">
+  <div class="home-hero-info">
+    <h2 class="home-hero-name">SungJae Park</h2>
+    <p class="home-hero-school">학교명 입력</p>
+    <p class="home-hero-email"><a href="mailto:이메일주소@예시.com">이메일주소@예시.com</a></p>
+    <div class="home-hero-links">
+      <a href="https://github.com/sungendary" target="_blank">GitHub</a>
+      <a href="링크드인 URL 입력" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+</div>
+{% endif %}
+
 <div class="content">
   {% include pagination-newer.html %}
 
