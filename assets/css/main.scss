@@ -59,9 +59,7 @@ $my-sidebar-icon-gap: 0.4rem;       // 메뉴 ~ 하단 아이콘 줄 사이
   width: 140px;
   height: 140px;
   object-fit: cover;
-  border: 3px solid rgba(255,255,255,0.9);
   flex-shrink: 0;
-  /* border-radius 없음 = 원본 사각형 그대로 */
 }
 
 .home-hero-info {
