@@ -3,4 +3,11 @@
 # only main files contain this front matter, not partials.
 ---
 
+$sidebar-sticky: false;
 @import "hydeout";
+
+#sidebar {
+  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("/assets/img/bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
