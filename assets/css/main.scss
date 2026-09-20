@@ -82,27 +82,15 @@ $my-sidebar-icon-gap: 0.4rem;       // 메뉴 ~ 하단 아이콘 줄 사이
 }
 
 .home-hero-email {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-
-.home-hero-email-icon {
-  display: inline-flex;
+  margin: 0;
   color: #fff;
 }
 
-.home-hero-email-icon {
-  display: inline-flex;
-  color: #fff;
-  position: relative;
-  top: 4px;
-}
-
-.home-hero-email-sep {
-  color: #fff;
-  position: relative;
-  top: 4px;
+.home-hero-email svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  vertical-align: -4px;
 }
 
 .home-hero-email a {
