@@ -3,7 +3,7 @@
     <mask id="li-knockout">
       <rect x="0" y="0" width="24" height="24" rx="5" fill="white"/>
       <text x="12" y="17.5" font-family="Arial, Helvetica, sans-serif"
-            font-size="13" font-weight="bold" text-anchor="middle" fill="black">in</text>
+            font-size="17" font-weight="bold" text-anchor="middle" fill="black">in</text>
     </mask>
   </defs>
   <rect x="0" y="0" width="24" height="24" rx="5" fill="currentColor" mask="url(#li-knockout)"/>
