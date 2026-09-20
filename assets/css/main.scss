@@ -95,6 +95,9 @@ $my-sidebar-icon-gap: 0.4rem;       // 메뉴 ~ 하단 아이콘 줄 사이
 .home-hero-icon {
   display: inline-flex;
   color: #fff;
+  text-decoration: none;
+  border-bottom: 1.5px dotted rgba(255,255,255,0.75);
+  padding-bottom: 3px;
 }
 
 .home-hero-icon svg {
