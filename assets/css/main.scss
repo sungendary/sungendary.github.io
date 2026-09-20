@@ -92,13 +92,17 @@ $my-sidebar-icon-gap: 0.4rem;       // 메뉴 ~ 하단 아이콘 줄 사이
   color: #fff;
 }
 
-.home-hero-email-icon svg {
-  width: 20px;
-  height: 20px;
+.home-hero-email-icon {
+  display: inline-flex;
+  color: #fff;
+  position: relative;
+  top: 2px;
 }
 
 .home-hero-email-sep {
   color: #fff;
+  position: relative;
+  top: 2px;
 }
 
 .home-hero-email a {
