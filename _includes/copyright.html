@@ -1,4 +1,12 @@
-<p>
-  &copy; {{ site.time | date: '%Y' }}.
-  <a href="{{ "/LICENSE.md" | relative_url }}">MIT License.</a>
+<p class="copyright">
+  © <span id="current-date"></span>. MIT License.
 </p>
+
+<script>
+  (function () {
+    var el = document.getElementById('current-date');
+    if (el) {
+      el.textContent = new Date().toLocaleDateString();
+    }
+  })();
+</script>
