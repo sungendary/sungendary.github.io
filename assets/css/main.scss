@@ -39,6 +39,7 @@ $my-sidebar-icon-gap: 0.4rem;       // 메뉴 ~ 하단 아이콘 줄 사이
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 1.5rem;
   padding: 2.5rem 2rem;
@@ -66,6 +67,8 @@ $my-sidebar-icon-gap: 0.4rem;       // 메뉴 ~ 하단 아이콘 줄 사이
 .home-hero-info {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 0.35rem;
 }
 
@@ -107,6 +110,7 @@ $my-sidebar-icon-gap: 0.4rem;       // 메뉴 ~ 하단 아이콘 줄 사이
 
 .home-hero-links {
   display: flex;
+  justify-content: center
   gap: 0.9rem;
   margin-top: 0.4rem;
 }
