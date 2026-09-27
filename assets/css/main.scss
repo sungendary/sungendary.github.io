@@ -280,9 +280,9 @@ html {
 
   /* 커서를 올렸을 때: 배경 어둡게 + 화살표 하늘색 */
   #sidebar-toggle:hover,
-  #sidebar-toggle:focus {
+  #sidebar-toggle:focus-visible {
     background-color: rgba(0, 0, 0, 0.35);
-    color: #7fd4f5;
+    color: #4fc3f7;
   }
 
   /* 사이드바와 본문이 부드럽게 움직이도록 */
