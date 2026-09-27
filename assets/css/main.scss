@@ -145,8 +145,14 @@ $my-sidebar-icon-gap: 0.4rem;       // 메뉴 ~ 하단 아이콘 줄 사이
 /* ----- 단일 페이지 섹션 ----- */
 html {
   scroll-behavior: smooth;
+  font-size: 15px;
 }
 
+@media (min-width: $large-breakpoint) {
+  html {
+    font-size: 17px;
+  }
+}
 .cv-section {
   scroll-margin-top: 1.5rem;
   margin-bottom: 3rem;
