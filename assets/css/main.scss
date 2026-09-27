@@ -246,3 +246,54 @@ html {
     color: #4fc3f7;                        // 하늘색
   }
 }
+
+/* ----- 사이드바 접기/펴기 ----- */
+@media (min-width: $large-breakpoint) {
+
+  /* 화살표 버튼: 사이드바 오른쪽 가장자리 세로 중앙 */
+  #sidebar-toggle {
+    position: absolute;
+    top: 50%;
+    right: -14px;                    // 사이드바 밖으로 절반 걸치게
+    transform: translateY(-50%);
+    width: 28px;
+    height: 46px;
+    padding: 0;
+    border: none;
+    border-radius: 0 6px 6px 0;      // 오른쪽 모서리만 둥글게
+    background: #fff;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    z-index: 10;
+  }
+
+  #sidebar-toggle svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* 사이드바와 본문이 부드럽게 움직이도록 */
+  #sidebar,
+  .container {
+    transition: transform 0.25s ease, margin-left 0.25s ease;
+  }
+
+  /* 접힌 상태: 사이드바를 왼쪽으로 밀어냄 */
+  .sidebar-collapsed #sidebar {
+    transform: translateX(-$sidebar-width);
+  }
+
+  /* 접힌 상태: 본문이 왼쪽 빈자리를 채움 */
+  .sidebar-collapsed .container {
+    margin-left: 0;
+  }
+
+  /* 접힌 상태: 버튼만 화면에 남고, 화살표 방향 반전 */
+  .sidebar-collapsed #sidebar-toggle {
+    transform: translateY(-50%) scaleX(-1);
+  }
+}
