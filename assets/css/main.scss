@@ -173,3 +173,44 @@ html {
     margin-top: auto !important;
   }
 }
+
+/* ----- 사이드바 정렬 및 메뉴 아이콘 ----- */
+@media (min-width: $large-breakpoint) {
+  #sidebar header {
+    text-align: center;
+    margin-bottom: 2.5rem;   /* 이름/소개 ~ 메뉴 사이 간격 */
+  }
+
+  #sidebar .site-title,
+  #sidebar header .lead {
+    text-align: center;
+  }
+
+  #sidebar-nav-links {
+    align-items: stretch;
+  }
+
+  #sidebar-nav-links .page-link {
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.6rem;
+    padding: 0.45rem 0;
+  }
+
+  .nav-icon {
+    display: inline-flex;
+    flex-shrink: 0;
+    color: rgba(255,255,255,0.55);
+  }
+
+  .nav-icon svg {
+    width: 18px;
+    height: 18px;
+    display: block;
+  }
+
+  .nav-text {
+    text-align: right;
+  }
+}
