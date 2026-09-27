@@ -9,61 +9,24 @@ layout: default
     <h2 class="home-hero-name">Sungjae Park</h2>
     <p class="home-hero-school">KGU</p>
     <p class="home-hero-major">Major in Artificial Intelligence</p>
-<p class="home-hero-email">
-  <span class="home-hero-email-icon">{% include svg/email.svg %}</span>
-  <span class="home-hero-email-sep">:</span>
-  <a href="mailto:이메일주소@예시.com">sungjae1357@kyonggi.ac.kr</a>
-</p>
+    <p class="home-hero-email">
+      {% include svg/email.svg %} : <a href="mailto:sungjae1357@kyonggi.ac.kr">sungjae1357@kyonggi.ac.kr</a>
+    </p>
     <div class="home-hero-links">
-  <a href="https://github.com/sungendary" target="_blank" title="GitHub" class="home-hero-icon">
-    {% include svg/github.svg %}
-  </a>
-  <a href="https://www.linkedin.com/in/sungjae-park/" target="_blank" title="LinkedIn" class="home-hero-icon">
-    {% include svg/linkedin-badge.svg %}
-  </a>
-  <a href="https://sungendary.tistory.com/" target="_blank" title="Tistory" class="home-hero-icon">
-    {% include svg/tistory.svg %}
-  </a>    
-</div>
+      <a href="https://github.com/sungendary" target="_blank" title="GitHub" class="home-hero-icon">
+        {% include svg/github.svg %}
+      </a>
+      <a href="https://www.linkedin.com/in/sungjae-park/" target="_blank" title="LinkedIn" class="home-hero-icon">
+        {% include svg/linkedin-badge.svg %}
+      </a>
+      <a href="https://sungendary.tistory.com/" target="_blank" title="Tistory" class="home-hero-icon">
+        {% include svg/tistory.svg %}
+      </a>
+    </div>
   </div>
 </div>
 {% endif %}
 
 <div class="content">
-  {% include pagination-newer.html %}
-
   {{ content }}
-
-  {% for post in paginator.posts %}
-  <article class="post-body">
-    <h2 class="post-title">
-      <a href="{{ post.url | relative_url }}">
-        {{ post.title }}
-      </a>
-    </h2>
-    {% include post-meta.html post=post %}
-
-    {% if post.excerpt %}
-      {{ post.excerpt }}
-    {% else %}
-      {{ post.content }}
-    {% endif %}
-
-    {% if post.excerpt %}
-      {% comment %}Excerpt may be equal to content. Check.{% endcomment %}
-      {% capture content_words %}
-        {{ post.content | number_of_words }}
-      {% endcapture %}
-      {% capture excerpt_words %}
-        {{ post.excerpt | number_of_words }}
-      {% endcapture %}
-
-      {% if content_words != excerpt_words %}
-        <a href="{{ post.url | relative_url }}">More &hellip;</a>
-      {% endif %}
-    {% endif %}
-  </article>
-  {% endfor %}
-
-  {% include pagination-older.html %}
 </div>
