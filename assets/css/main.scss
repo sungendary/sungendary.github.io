@@ -224,8 +224,12 @@ html {
 /* ----- 사이드바 메뉴 hover 효과 ----- */
 @media (min-width: $large-breakpoint) {   // 데스크탑 화면에서만 적용
   #sidebar-nav-links .page-link {
-    padding-right: 1rem;                   // 메뉴 오른쪽 안쪽 여백 (띠가 끝에 닿지 않게)
-    transition: background-color 0.15s ease; // 배경색이 부드럽게 바뀌도록
+  padding-right: 0;
+  margin-left: -$my-sidebar-padding;
+  margin-right: -$my-sidebar-padding;
+  padding-left: $my-sidebar-padding;
+  padding-right: $my-sidebar-padding;
+  transition: background-color 0.15s ease;
   }
 
   /* 마우스를 올렸을 때(hover) + 키보드로 선택했을 때(focus) */
