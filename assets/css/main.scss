@@ -220,3 +220,25 @@ html {
     text-align: right;
   }
 }
+
+/* ----- 사이드바 메뉴 hover 효과 ----- */
+@media (min-width: $large-breakpoint) {   // 데스크탑 화면에서만 적용
+  #sidebar-nav-links .page-link {
+    padding-right: 1rem;                   // 메뉴 오른쪽 안쪽 여백 (띠가 끝에 닿지 않게)
+    transition: background-color 0.15s ease; // 배경색이 부드럽게 바뀌도록
+  }
+
+  /* 마우스를 올렸을 때(hover) + 키보드로 선택했을 때(focus) */
+  #sidebar-nav-links .page-link:hover,
+  #sidebar-nav-links .page-link:focus {
+    background-color: rgba(0, 0, 0, 0.35); // 어두운 띠 배경
+    text-decoration: none !important;      // 테마 기본 밑줄 제거
+    font-weight: bold;                     // 글자 굵게
+  }
+
+  /* 위와 같은 상황에서 아이콘 색만 따로 지정 */
+  #sidebar-nav-links .page-link:hover .nav-icon,
+  #sidebar-nav-links .page-link:focus .nav-icon {
+    color: #7fd4f5;                        // 하늘색
+  }
+}
