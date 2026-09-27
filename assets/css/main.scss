@@ -161,3 +161,15 @@ html {
 .container > .content {
   max-width: none;
 }
+
+@media (min-width: $large-breakpoint) {
+  #sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  #sidebar-icon-links {
+    margin-top: auto !important;
+  }
+}
