@@ -1,1 +1,8 @@
-<!-- Optional footer content -->
+<script>
+  (function () {
+    var el = document.getElementById('current-date');
+    if (el) {
+      el.textContent = new Date().toLocaleDateString();
+    }
+  })();
+</script>
