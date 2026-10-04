@@ -5,37 +5,101 @@ title: Home
 
 <section id="top" class="cv-section">
   <h2>About</h2>
+
   <p>
-    여기에 자기소개를 작성하세요. 경기대학교 인공지능전공 재학 중이며...
+    I am an undergraduate student majoring in Artificial Intelligence at
+    Kyonggi University. I previously worked as an undergraduate research assistant
+    at the AI Vision Lab under the guidance of Prof. Junho Ahn, where I conducted
+    research on 3D LiDAR-based perception for autonomous driving. Before that, I was a member of
+    the RO:AD club, where I gained hands-on experience with autonomous driving platforms such as
+    ROS2, Autoware, and F1TENTH.
+  </p>
+
+  <p>
+    My interest lies in building <strong>reliable autonomous driving systems</strong>.
+    Rather than focusing on a single module, I am interested in how perception, planning, and
+    validation work together as a whole system, and in how rule-based and AI-based approaches
+    can be combined to achieve both high performance and trustworthiness.
+    My work addresses this goal through three main directions:
+  </p>
+
+  <ul>
+    <li>
+      <strong>Perception</strong>: I aim to help vehicles understand their surroundings accurately
+      by detecting and tracking 3D objects, fusing information from multiple sensors, localizing
+      the vehicle within a map, and identifying lanes and drivable areas.
+    </li>
+    <li>
+      <strong>Decision Making &amp; Motion Planning</strong>: I am interested in how a vehicle decides
+      what to do next and how it should move, from high-level behavior planning to generating
+      safe trajectories and controlling the vehicle to follow them.
+    </li>
+    <li>
+      <strong>Validation</strong>: I study how to verify that autonomous driving systems behave as
+      intended, by evaluating their performance in both simulation and real vehicles and by
+      testing them across diverse driving scenarios.
+    </li>
+  </ul>
+
+  <p>
+    If you have any questions or would like to chat, please feel free to reach out anytime.
   </p>
 </section>
 
 <section id="news" class="cv-section">
   <h2>News</h2>
-  <ul>
-    <li><strong>[2026.09]</strong> 개인 홈페이지를 개설했습니다.</li>
-    <li><strong>[2026.03]</strong> 소식 내용을 여기에 적으세요.</li>
-  </ul>
+  <p>Updates will be posted here.</p>
 </section>
 
 <section id="education" class="cv-section">
   <h2>Education</h2>
-  <ul>
-    <li>
-      <strong>경기대학교</strong> — 인공지능전공 (2026.03 – 재학 중)
-    </li>
-  </ul>
+
+  <div class="cv-item">
+    <div class="cv-item-left">
+      <div class="cv-item-title">Kyonggi University</div>
+      <div>B.S. in Artificial Intelligence</div>
+      <div class="cv-item-note">(CGPA: 4.12 / 4.5)</div>
+    </div>
+    <div class="cv-item-right">
+      <div>Mar 2022 - Feb 2028 (Expected)</div>
+      <div>(Apr 2023 - Oct 2024: Military Service)</div>
+    </div>
+  </div>
 </section>
 
 <section id="publications" class="cv-section">
   <h2>Publications</h2>
-  <ul>
-    <li>
-      <strong>논문 제목</strong><br>
-      저자명, 저자명<br>
-      <em>학회/저널명</em>, 2026
-    </li>
-  </ul>
+
+  <div class="pub-item">
+    <img class="pub-thumb" src="{{ '/files/lidar_indoor_paper.png' | relative_url }}" alt="">
+    <div class="pub-body">
+      <div class="pub-title">3D LiDAR-based Indoor Space Modeling and Denoising Strategies</div>
+      <div class="pub-detail">
+        <span class="pub-me">SungJae Park</span>, Taehoon Kim, Sehoon Lee, Junho Ahn<sup>†</sup>.
+      </div>
+      <div class="pub-detail"><em>Journal of Korean Association for Data Science (JKADS)</em>. 2026.</div>
+      <div class="pub-detail">
+        [<a href="https://www.koreadatascience.org/uploads/journal/pdfs/1782968652099-188212036.pdf" target="_blank">paper</a>]
+      </div>
+    </div>
+  </div>
+
+  <div class="pub-item">
+    <img class="pub-thumb" src="{{ '/fiels/llm_contract.png' | relative_url }}" alt="">
+    <div class="pub-body">
+      <div class="pub-title">Privacy-Preserving LLM-Based Real-Time Employment Contract Analysis and Guidance System</div>
+      <div class="pub-detail">
+        JongHan Lee, <span class="pub-me">SungJae Park</span>, ChaeEun Lee, AHyun Kwon, MinJae Kim,
+        HyunSeok Shin, YeonWoo Hwang, WangDeok Seo<sup>†</sup>.
+      </div>
+      <div class="pub-detail"><em>KIIT Summer Conference</em>. 2026.</div>
+      <div class="pub-detail">
+        [<a href="https://sungendary.github.io/files/KIIT_summer_conference_2026.pdf" target="_blank">paper</a>]
+      </div>
+    </div>
+  </div>
+
+  <p class="pub-footnote"><sup>†</sup> Corresponding author</p>
 </section>
 
 <section id="experience" class="cv-section">

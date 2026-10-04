@@ -350,3 +350,83 @@ html {
     height: auto;
   }
 }
+
+/* ----- 이력 항목 공통 (Education, Experience 등) ----- */
+.cv-item {
+  display: flex;
+  justify-content: space-between;   // 왼쪽 내용 / 오른쪽 기간
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.cv-item-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.cv-item-note {
+  font-style: italic;               // (CGPA ...) 기울임
+}
+
+.cv-item-right {
+  text-align: right;
+  color: $link-color;               // 테마 링크색(파란색)과 동일
+  white-space: nowrap;              // 기간이 중간에 줄바꿈되지 않게
+}
+
+/* 좁은 화면에서는 기간을 아래로 내림 */
+@media (max-width: $large-breakpoint) {
+  .cv-item {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .cv-item-right {
+    text-align: left;
+  }
+}
+
+/* ----- Publications ----- */
+.pub-item {
+  display: flex;
+  align-items: center;              // 그림과 텍스트 세로 중앙 정렬
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.pub-thumb {
+  width: 200px;                     // 그림 너비
+  flex-shrink: 0;
+  height: auto;                     // 원본 비율 유지
+}
+
+.pub-title {
+  font-weight: bold;
+  font-size: 1.05rem;
+  margin-bottom: 0.2rem;
+}
+
+.pub-detail {
+  padding-left: 1rem;               // 저자/학회/링크 들여쓰기
+}
+
+.pub-me {
+  font-weight: bold;
+  text-decoration: underline;       // 본인 이름 강조
+}
+
+.pub-footnote {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* 좁은 화면에서는 그림을 위로 */
+@media (max-width: $large-breakpoint) {
+  .pub-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .pub-thumb {
+    width: 100%;
+    max-width: 320px;
+  }
+}
