@@ -309,3 +309,44 @@ html {
     border-radius: 6px 0 0 6px;      // 반전되므로 모서리도 반대쪽
   }
 }
+
+/* ----- Projects 카드 ----- */
+.project-card {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 1.8rem;
+}
+
+.project-thumb {
+  width: 200px;              // 썸네일 너비
+  height: 130px;             // 썸네일 높이
+  object-fit: cover;         // 비율 다른 이미지도 잘라서 꽉 채움
+  flex-shrink: 0;
+  border-radius: 4px;
+}
+
+.project-title {
+  margin: 0 0 0.2rem;
+  font-size: 1.05rem;
+}
+
+.project-meta {
+  margin: 0 0 0.4rem;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.project-body p {
+  margin-bottom: 0.4rem;
+}
+
+/* 좁은 화면에서는 이미지 위, 설명 아래 */
+@media (max-width: $large-breakpoint) {
+  .project-card {
+    flex-direction: column;
+  }
+  .project-thumb {
+    width: 100%;
+    height: auto;
+  }
+}
