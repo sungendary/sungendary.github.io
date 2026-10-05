@@ -430,3 +430,30 @@ html {
     max-width: 320px;
   }
 }
+
+.cv-item-org {
+  font-weight: normal;              // 학교명은 굵기 해제
+  color: #666;                      // 살짝 연하게
+}
+
+.cv-item-role {
+  font-size: 0.9rem;                // 직책 줄은 조금 작게
+}
+
+/* ----- Awards & Honors ----- */
+.award-item {
+  display: flex;
+  justify-content: space-between;   // 수상명 왼쪽 / 연도 오른쪽
+  gap: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.award-year {
+  color: $link-color;               // Education/Experience 기간과 같은 파란색
+  white-space: nowrap;
+}
+
+.award-subhead {
+  margin-top: 1.8rem;
+  font-size: 1.05rem;
+}
