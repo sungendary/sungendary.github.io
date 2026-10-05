@@ -318,10 +318,10 @@ html {
 }
 
 .project-thumb {
-  width: 200px;              // 썸네일 너비
-  height: 130px;             // 썸네일 높이
-  object-fit: cover;         // 비율 다른 이미지도 잘라서 꽉 채움
+  width: 200px;
+  height: auto;              // 원본 비율 유지 (잘림 없음)
   flex-shrink: 0;
+  align-self: flex-start;    // 카드 위쪽에 정렬
   border-radius: 4px;
 }
 
@@ -456,4 +456,25 @@ html {
 .award-subhead {
   margin-top: 1.8rem;
   font-size: 1.05rem;
+}
+
+.project-role-head {
+  font-weight: bold;
+  margin: 0.6rem 0 0.2rem;
+}
+
+.project-role {
+  margin: 0 0 0.5rem;
+  padding-left: 1.2rem;
+}
+
+.project-role li {
+  margin-bottom: 0.15rem;
+}
+
+.project-note {
+  font-size: 0.8rem;
+  color: #888;
+  font-style: italic;
+  margin-top: 0.4rem;
 }

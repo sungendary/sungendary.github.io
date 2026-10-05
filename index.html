@@ -133,18 +133,66 @@ title: Home
   <h2>Projects</h2>
 
   <div class="project-card">
-    <img class="project-thumb" src="{{ '/assets/img/projects/sample.gif' | relative_url }}" alt="project thumbnail">
-    <div class="project-body">
-      <h3 class="project-title">프로젝트 제목</h3>
-      <p class="project-meta">소속/대회명 &nbsp;|&nbsp; 2025.03 – 2025.06</p>
-      <p>프로젝트에서 해결한 문제와 본인이 맡은 역할을 2~3줄로 작성.</p>
+    <img class="project-thumb" src="{{ '/files/project_sllm_architecture.png' | relative_url }}" alt="sLLM system architecture">
+            <div class="project-body">
+      <h3 class="project-title">sLLM-based SPL Query Recommendation for Air-Gapped Security Monitoring</h3>
+      <p class="project-meta">Military–Academia Collaboration with ROK Defense Communication Command, AI Vision Lab &nbsp;|&nbsp; Apr 2026 - Jul 2026</p>
+      <p>
+        An on-premise small LLM that turns natural-language requests into Splunk SPL queries,
+        enabling security operators in an air-gapped military network to analyze logs without
+        writing complex queries. The team fine-tuned 27–32B open models and deployed them on a single GPU.
+      </p>
+      <p class="project-role-head">My Role (Data &amp; Evaluation)</p>
+            <ul class="project-role">
+        <li>Surveyed evaluation methods for query generation and showed that n-gram metrics such as BLEU and ROUGE fail to capture SPL correctness, informing the project's three-metric evaluation framework.</li>
+        <li>Built a 638-pair test set from 31 military-provided scenario types across 19 log types, cross-reviewed by military experts and the university team.
+          [<a href="{{ '/files/project_sllm_test_pipeline.png' | relative_url }}" target="_blank">image</a>]
+        </li>
+        <li>Developed an early training-data augmentation pipeline. After finding that rule-based rewriting alone produced repetitive and unnatural queries, narrowed the rules to key field-name substitutions and added LLM-based paraphrasing (Gemma 4 E2B) to diversify query styles.</li>
+        <li>Evaluated six fine-tuned models on natural-language robustness, syntax validity, and execution accuracy.</li>
+      </ul>
       <p class="project-links">
-        [<a href="#" target="_blank">Video</a>]
-        [<a href="#" target="_blank">Code</a>]
+        Final model (EXAONE-4.0.1-32B) achieved 98.0% robustness, 88.9% syntax validity, and 86.2% execution accuracy.
+      </p>
+      <p class="project-note">
+        * Some details, code, and data are not disclosed due to the security policy of the partner military organization.
       </p>
     </div>
   </div>
 
+  <div class="project-card">
+    <img class="project-thumb" src="{{ '/files/project_roadclub_2022.png' | relative_url }}" alt="TURTLE robot">
+    <div class="project-body">
+      <h3 class="project-title">TURTLE: Autonomous Delivery Robot</h3>
+      <p class="project-meta">RO:AD Club, Kyonggi University SW Imagination Company &nbsp;|&nbsp; Mar 2022 - Dec 2022</p>
+      <p>
+        A tracked indoor delivery robot designed to carry parcels from the entrance of an apartment
+        complex to residents' doors, integrating LiDAR-IMU SLAM, A* path planning,
+        vision-based pedestrian detection, and a KakaoTalk notification service on ROS.
+      </p>
+      <p class="project-role-head">My Role (Visual Detector Team)</p>
+            <ul class="project-role">
+        <li>Collected and labeled a custom dataset tailored to the robot's operating environment.
+          [<a href="{{ '/files/project_roadclub_labeling_2026.png' | relative_url }}" target="_blank">image</a>]
+        </li>
+        <li>Trained a YOLOv5-based person detector. After observing false positives on background
+            objects such as curtains and desks, expanded the dataset with more diverse images to
+            improve pedestrian recognition.
+          [<a href="{{ '/files/project_roadclub_yolov5_2026.mp4' | relative_url }}" target="_blank">video</a>]
+        </li>
+        <li>Obtained object distances using an Intel RealSense D435 depth camera to support
+            collision-avoidance decisions.
+          [<a href="{{ '/files/project_roadclub_depth_2026.mp4' | relative_url }}" target="_blank">video</a>]
+        </li>
+        <li>Integrated the detection and depth modules into the robot's ROS system.
+        </li>
+      </ul>
+      <p class="project-links">
+        Honorable Mention, SW Imagination Company 2022
+        [<a href="{{ '/files/honorable_mention_2022.pdf' | relative_url }}" target="_blank">poster</a>]
+      </p>
+    </div>
+  </div>
 </section>
 
 <section id="awards" class="cv-section">
