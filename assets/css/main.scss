@@ -153,14 +153,19 @@ html {
     font-size: 15px;
   }
 }
+
 .cv-section {
   scroll-margin-top: 1.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 0;
+  padding: 2rem 0;                   // 섹션 위아래 여백
+}
+
+/* 두 번째 섹션부터 위쪽에 구분선 */
+.cv-section + .cv-section {
+  border-top: 1px solid #e0e0e0;
 }
 
 .cv-section h2 {
-  border-bottom: 1px solid #e0e0e0;
-  padding-bottom: 0.4rem;
   margin-bottom: 1rem;
 }
 
@@ -485,3 +490,15 @@ html {
   font-style: italic;
 }
 
+.subhead-muted {
+  font-size: 0.9rem;   // 기존 1.05rem보다 한 단계 작게
+  color: #999;         // 더 흐리게
+}
+
+.home-hero-updated {
+  position: absolute;               // 배너 기준으로 위치 고정
+  right: 1rem;                      // 오른쪽 여백
+  bottom: 0.6rem;                   // 아래쪽 여백
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.75); // 배경 사진 위에서 은은하게
+}
